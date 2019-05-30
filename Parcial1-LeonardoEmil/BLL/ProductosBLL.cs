@@ -41,7 +41,7 @@ namespace Parcial1_LeonardoEmil.BLL
             try
             {
                 contexto.Entry(producto).State = EntityState.Modified;
-                paso = contexto.SaveChanges() > 0;
+                paso = (contexto.SaveChanges() > 0);
             }
             catch(Exception)
             {
@@ -64,7 +64,7 @@ namespace Parcial1_LeonardoEmil.BLL
                 var eliminar = contexto.Producto.Find(id);
                 contexto.Entry(eliminar).State = EntityState.Deleted;
 
-                paso = contexto.SaveChanges() > 0;
+                paso = (contexto.SaveChanges() > 0);
             }
             catch(Exception)
             {
