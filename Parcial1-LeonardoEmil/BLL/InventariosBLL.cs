@@ -93,5 +93,29 @@ namespace Parcial1_LeonardoEmil.BLL
             }
             return inventario;
         }
+
+        public static bool Eliminar(int id)
+        {
+            bool paso = false;
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                var eliminar = contexto.Inventario.Find(id);
+                contexto.Entry(eliminar).State = EntityState.Deleted;
+
+                paso = (contexto.SaveChanges() > 0);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return paso;
+        }
+
     }
 }
