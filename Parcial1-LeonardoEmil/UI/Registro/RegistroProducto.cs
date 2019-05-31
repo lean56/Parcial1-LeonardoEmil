@@ -38,6 +38,7 @@ namespace Parcial1_LeonardoEmil.UI.Registro
             producto.Existencia = Convert.ToInt32(ExistencianumericUpDown.Value);
             producto.Costo = Convert.ToInt32(CostonumericUpDown.Value);
             producto.ValorInventario = Convert.ToInt32(ValorInventarionumericUpDown.Value);
+            
 
             return producto;
         }
@@ -161,15 +162,7 @@ namespace Parcial1_LeonardoEmil.UI.Registro
             MyErrorProvider.SetError(IdnumericUpDown, "Id no Existe");
         }
 
-        private void CostonumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            int n1, n2, total;
-            n1 = Convert.ToInt32(ExistencianumericUpDown.Value);
-            n2 = Convert.ToInt32(CostonumericUpDown.Value);
-
-            total = n1 * n2;
-            ValorInventarionumericUpDown.Value = total;
-        }
+   
     }
 
 }

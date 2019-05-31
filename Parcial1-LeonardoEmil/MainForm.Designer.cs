@@ -31,13 +31,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registroToolStripMenuItem});
+            this.registroToolStripMenuItem,
+            this.consultaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(355, 24);
@@ -55,9 +58,23 @@
             // registroProductoToolStripMenuItem
             // 
             this.registroProductoToolStripMenuItem.Name = "registroProductoToolStripMenuItem";
-            this.registroProductoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registroProductoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.registroProductoToolStripMenuItem.Text = "Registro Producto";
             this.registroProductoToolStripMenuItem.Click += new System.EventHandler(this.registroProductoToolStripMenuItem_Click);
+            // 
+            // consultaToolStripMenuItem
+            // 
+            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultaInventarioToolStripMenuItem});
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.consultaToolStripMenuItem.Text = "Consulta";
+            // 
+            // consultaInventarioToolStripMenuItem
+            // 
+            this.consultaInventarioToolStripMenuItem.Name = "consultaInventarioToolStripMenuItem";
+            this.consultaInventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaInventarioToolStripMenuItem.Text = "Consulta Inventario";
             // 
             // MainForm
             // 
@@ -80,6 +97,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroProductoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaInventarioToolStripMenuItem;
     }
 }
 

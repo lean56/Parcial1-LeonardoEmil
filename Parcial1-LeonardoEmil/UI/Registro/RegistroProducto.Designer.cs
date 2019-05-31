@@ -131,7 +131,6 @@
             this.CostonumericUpDown.Name = "CostonumericUpDown";
             this.CostonumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.CostonumericUpDown.TabIndex = 7;
-            this.CostonumericUpDown.ValueChanged += new System.EventHandler(this.CostonumericUpDown_ValueChanged);
             // 
             // ValorInventarionumericUpDown
             // 

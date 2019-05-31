@@ -12,7 +12,6 @@ namespace Parcial1_LeonardoEmil.DAL
     public class Contexto : DbContext
     {
         public DbSet<Productos> Producto { get; set; }
-
         public Contexto() : base("Constr") { }
     }
 }

@@ -23,5 +23,7 @@ namespace Parcial1_LeonardoEmil
             RegistroProducto rp = new RegistroProducto();
             rp.Show();
         }
+
+    
     }
 }

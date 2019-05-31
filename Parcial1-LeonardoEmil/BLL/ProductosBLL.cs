@@ -17,11 +17,12 @@ namespace Parcial1_LeonardoEmil.BLL
         {
             bool paso = false;
             Contexto contexto = new Contexto();
-
             try
             {
                 if (contexto.Producto.Add(producto) != null)
                     paso = contexto.SaveChanges() > 0;
+                paso = true;
+            
             }
             catch(Exception)
             {
@@ -105,7 +106,7 @@ namespace Parcial1_LeonardoEmil.BLL
 
             try
             {
-
+                Lista = contexto.Producto.Where(producto).ToList();
             }
             catch(Exception)
             {
@@ -118,5 +119,9 @@ namespace Parcial1_LeonardoEmil.BLL
             return Lista;
         }
 
+        public static int ValorInventario(int costo,int existencia)
+        {
+            return costo * existencia;
+        }
     }
 }
