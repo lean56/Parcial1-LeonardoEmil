@@ -73,5 +73,25 @@ namespace Parcial1_LeonardoEmil.BLL
             }
             return Lista;
         }
+
+        public static Inventarios Buscar(int id)
+        {
+            Contexto contexto = new Contexto();
+            Inventarios inventario = new Inventarios();
+
+            try
+            {
+                inventario = contexto.Inventario.Find(id);
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return inventario;
+        }
     }
 }
