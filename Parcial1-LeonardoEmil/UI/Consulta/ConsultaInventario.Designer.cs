@@ -47,6 +47,8 @@
             // 
             // ValorInventarionumericUpDown
             // 
+            this.ValorInventarionumericUpDown.Enabled = false;
+            this.ValorInventarionumericUpDown.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.ValorInventarionumericUpDown.Location = new System.Drawing.Point(125, 54);
             this.ValorInventarionumericUpDown.Maximum = new decimal(new int[] {
             100000,
@@ -54,7 +56,7 @@
             0,
             0});
             this.ValorInventarionumericUpDown.Name = "ValorInventarionumericUpDown";
-            this.ValorInventarionumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.ValorInventarionumericUpDown.Size = new System.Drawing.Size(96, 20);
             this.ValorInventarionumericUpDown.TabIndex = 1;
             // 
             // Actualizarbutton
@@ -70,10 +72,11 @@
             // ValorInventariodataGridView
             // 
             this.ValorInventariodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ValorInventariodataGridView.Location = new System.Drawing.Point(311, 249);
+            this.ValorInventariodataGridView.Location = new System.Drawing.Point(322, 266);
             this.ValorInventariodataGridView.Name = "ValorInventariodataGridView";
             this.ValorInventariodataGridView.Size = new System.Drawing.Size(10, 10);
             this.ValorInventariodataGridView.TabIndex = 3;
+            this.ValorInventariodataGridView.Visible = false;
             // 
             // ConsultaInventario
             // 

@@ -38,8 +38,7 @@ namespace Parcial1_LeonardoEmil.UI.Registro
             producto.Existencia = Convert.ToInt32(ExistencianumericUpDown.Value);
             producto.Costo = Convert.ToInt32(CostonumericUpDown.Value);
             producto.ValorInventario = Convert.ToInt32(ValorInventarionumericUpDown.Value);
-            
-
+         
             return producto;
         }
 
@@ -58,7 +57,7 @@ namespace Parcial1_LeonardoEmil.UI.Registro
 
             return (producto != null);
         }
-
+      
         private bool Validar()
         {
             bool paso = true;
@@ -97,9 +96,11 @@ namespace Parcial1_LeonardoEmil.UI.Registro
                 return;
 
             producto = LlenarClase();
-       
+
             if (IdnumericUpDown.Value == 0)
+            {
                 paso = ProductosBLL.Guardar(producto);
+            }
             else
             {
                 if (!ExisteEnLaBaseDeDatos())
