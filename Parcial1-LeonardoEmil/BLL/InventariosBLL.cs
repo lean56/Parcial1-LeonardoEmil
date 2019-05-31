@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Parcial1_LeonardoEmil.Entidades;
 using Parcial1_LeonardoEmil.DAL;
 using System.Data.Entity;
+using System.Linq.Expressions;
 
 namespace Parcial1_LeonardoEmil.BLL
 {
@@ -51,6 +52,26 @@ namespace Parcial1_LeonardoEmil.BLL
                 contexto.Dispose();
             }
             return paso;
+        }
+
+        public static List<Inventarios> GetList(Expression<Func<Inventarios, bool>> inventario)
+        {
+            List<Inventarios> Lista = new List<Inventarios>();
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                Lista = contexto.Inventario.Where(inventario).ToList();
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return Lista;
         }
     }
 }
