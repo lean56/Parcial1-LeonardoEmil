@@ -162,7 +162,21 @@ namespace Parcial1_LeonardoEmil.UI.Registro
             MyErrorProvider.SetError(IdnumericUpDown, "Id no Existe");
         }
 
-   
+        private void CostonumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            int costo = Convert.ToInt32(CostonumericUpDown.Value);
+            int existencia = Convert.ToInt32(ExistencianumericUpDown.Value);
+
+            ValorInventarionumericUpDown.Value = ProductosBLL.ValorInventario(costo, existencia);
+        }
+
+        private void ExistencianumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            int costo = Convert.ToInt32(CostonumericUpDown.Value);
+            int existencia = Convert.ToInt32(ExistencianumericUpDown.Value);
+
+            ValorInventarionumericUpDown.Value = ProductosBLL.ValorInventario(costo, existencia);
+        }
     }
 
 }

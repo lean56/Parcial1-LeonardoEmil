@@ -58,7 +58,7 @@
             // registroProductoToolStripMenuItem
             // 
             this.registroProductoToolStripMenuItem.Name = "registroProductoToolStripMenuItem";
-            this.registroProductoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.registroProductoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registroProductoToolStripMenuItem.Text = "Registro Producto";
             this.registroProductoToolStripMenuItem.Click += new System.EventHandler(this.registroProductoToolStripMenuItem_Click);
             // 
@@ -75,6 +75,7 @@
             this.consultaInventarioToolStripMenuItem.Name = "consultaInventarioToolStripMenuItem";
             this.consultaInventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultaInventarioToolStripMenuItem.Text = "Consulta Inventario";
+            this.consultaInventarioToolStripMenuItem.Click += new System.EventHandler(this.consultaInventarioToolStripMenuItem_Click);
             // 
             // MainForm
             // 

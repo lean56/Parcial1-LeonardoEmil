@@ -119,6 +119,7 @@
             this.ExistencianumericUpDown.Name = "ExistencianumericUpDown";
             this.ExistencianumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.ExistencianumericUpDown.TabIndex = 6;
+            this.ExistencianumericUpDown.ValueChanged += new System.EventHandler(this.ExistencianumericUpDown_ValueChanged);
             // 
             // CostonumericUpDown
             // 
@@ -131,6 +132,7 @@
             this.CostonumericUpDown.Name = "CostonumericUpDown";
             this.CostonumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.CostonumericUpDown.TabIndex = 7;
+            this.CostonumericUpDown.ValueChanged += new System.EventHandler(this.CostonumericUpDown_ValueChanged);
             // 
             // ValorInventarionumericUpDown
             // 
