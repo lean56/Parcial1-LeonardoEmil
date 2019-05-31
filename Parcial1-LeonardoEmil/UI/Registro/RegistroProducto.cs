@@ -37,9 +37,18 @@ namespace Parcial1_LeonardoEmil.UI.Registro
             producto.Descripcion = DescripciontextBox.Text;
             producto.Existencia = Convert.ToInt32(ExistencianumericUpDown.Value);
             producto.Costo = Convert.ToInt32(CostonumericUpDown.Value);
-            producto.ValorInventario = Convert.ToInt32(ValorInventarionumericUpDown.Value);
+        //    producto.ValorInventario = Convert.ToInt32(ValorInventarionumericUpDown.Value);
          
             return producto;
+        }
+
+        private Inventarios LLenarInventario()
+        {
+            Inventarios inventario = new Inventarios();
+
+            inventario.TotalInventario = Convert.ToInt32(ValorInventarionumericUpDown.Value);
+
+            return inventario;
         }
 
         private void LlenaCampo(Productos producto)
