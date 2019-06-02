@@ -184,6 +184,12 @@ namespace Parcial1_LeonardoEmil.UI.Registro
             }
             else
             {
+                if (!ExisteEnLaBaseDeDatos())
+                {
+                    MessageBox.Show("No se puede Eliminar una persona que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
                 if (ProductosBLL.Eliminar(id))
                 {
                     MessageBox.Show("Producto Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -192,8 +198,9 @@ namespace Parcial1_LeonardoEmil.UI.Registro
                 }
                 else
                     MyErrorProvider.SetError(IdnumericUpDown, "Id no Existe");
+
             }
-           
+            
         }
 
         private void CostonumericUpDown_ValueChanged(object sender, EventArgs e)
