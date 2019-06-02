@@ -33,6 +33,7 @@
             this.registroProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             // registroToolStripMenuItem
             // 
             this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registroProductoToolStripMenuItem});
+            this.registroProductoToolStripMenuItem,
+            this.mToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.registroToolStripMenuItem.Text = "Registro";
@@ -73,9 +75,16 @@
             // consultaInventarioToolStripMenuItem
             // 
             this.consultaInventarioToolStripMenuItem.Name = "consultaInventarioToolStripMenuItem";
-            this.consultaInventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaInventarioToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.consultaInventarioToolStripMenuItem.Text = "Consulta Inventario";
             this.consultaInventarioToolStripMenuItem.Click += new System.EventHandler(this.consultaInventarioToolStripMenuItem_Click);
+            // 
+            // mToolStripMenuItem
+            // 
+            this.mToolStripMenuItem.Name = "mToolStripMenuItem";
+            this.mToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mToolStripMenuItem.Text = "m";
+            this.mToolStripMenuItem.Click += new System.EventHandler(this.mToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -100,6 +109,7 @@
         private System.Windows.Forms.ToolStripMenuItem registroProductoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaInventarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mToolStripMenuItem;
     }
 }
 

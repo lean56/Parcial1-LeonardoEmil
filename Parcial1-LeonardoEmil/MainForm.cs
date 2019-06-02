@@ -30,5 +30,11 @@ namespace Parcial1_LeonardoEmil
             ConsultaInventario ci = new ConsultaInventario();
             ci.Show();
         }
+
+        private void mToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Principal p = new Principal();
+           p.Show();
+        }
     }
 }
