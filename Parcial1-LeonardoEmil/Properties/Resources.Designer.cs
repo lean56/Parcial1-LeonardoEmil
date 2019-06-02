@@ -109,5 +109,15 @@ namespace Parcial1_LeonardoEmil.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap system_software_update_22485 {
+            get {
+                object obj = ResourceManager.GetObject("system_software_update_22485", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

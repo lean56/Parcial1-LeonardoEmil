@@ -18,24 +18,14 @@ namespace Parcial1_LeonardoEmil.UI.Consulta
         {
             InitializeComponent();
             CargarInventario();
-
         }
 
         public void CargarInventario()
         {
-            var listado = new List<Productos>();
+            Inventarios inventario = new Inventarios();
+            inventario = InventariosBLL.Buscar(1);
 
-            listado = ProductosBLL.GetList(p => true);
-
-            ValorInventariodataGridView.DataSource = null;
-            ValorInventariodataGridView.DataSource = listado;
-
-            int total = 0;
-            foreach (DataGridViewRow producto in ValorInventariodataGridView.Rows)
-            {
-                total += Convert.ToInt32(producto.Cells["ValorInventario"].Value);
-            }
-            ValorInventarionumericUpDown.Text = Convert.ToString(total);
+            ValorInventariotextBox.Text = Convert.ToString(inventario.TotalInventario);
         }
 
         private void Actualizarbutton_Click(object sender, EventArgs e)

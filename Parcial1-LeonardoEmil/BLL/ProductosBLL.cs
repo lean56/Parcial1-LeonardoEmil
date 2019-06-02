@@ -135,13 +135,15 @@ namespace Parcial1_LeonardoEmil.BLL
             listado = GetList(p => true);
             rp.InventariodataGridView.DataSource = null;
             rp.InventariodataGridView.DataSource = listado; //llenando datagrid
+
             double total = 0;
             foreach (DataGridViewRow producto in rp.InventariodataGridView.Rows)
             {
                 total += Convert.ToDouble(producto.Cells["ValorInventario"].Value); //acumulando el valor de inventario productos
             }
+
             inventario.InventarioId = 1;
-            inventario.TotalInventario = Convert.ToSingle(total);
+            inventario.TotalInventario = Convert.ToInt32(total);
             if (InventariosBLL.Buscar(1) == null)
             {
                 InventariosBLL.Guardar(inventario);

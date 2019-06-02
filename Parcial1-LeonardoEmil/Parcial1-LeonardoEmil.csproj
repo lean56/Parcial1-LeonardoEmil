@@ -126,6 +126,8 @@
   <ItemGroup>
     <None Include="Resources\Search_find_3519.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\system_software_update_22485.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

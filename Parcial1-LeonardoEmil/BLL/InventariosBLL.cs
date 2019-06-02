@@ -8,10 +8,12 @@ using Parcial1_LeonardoEmil.DAL;
 using System.Data.Entity;
 using System.Linq.Expressions;
 
+
 namespace Parcial1_LeonardoEmil.BLL
 {
-   public class InventariosBLL
+    public class InventariosBLL
     {
+
         public static bool Guardar(Inventarios inventario)
         {
             bool paso = false;
