@@ -48,12 +48,14 @@
             this.NuevoButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
+            this.InventariodataGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistencianumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostonumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValorInventarionumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InventariodataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -238,11 +240,21 @@
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
+            // InventariodataGridView
+            // 
+            this.InventariodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InventariodataGridView.Location = new System.Drawing.Point(270, 139);
+            this.InventariodataGridView.Name = "InventariodataGridView";
+            this.InventariodataGridView.Size = new System.Drawing.Size(10, 10);
+            this.InventariodataGridView.TabIndex = 15;
+            this.InventariodataGridView.Visible = false;
+            // 
             // RegistroProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 312);
+            this.Controls.Add(this.InventariodataGridView);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.DescripciontextBox);
@@ -264,6 +276,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InventariodataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +303,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.DataGridView InventariodataGridView;
     }
 }

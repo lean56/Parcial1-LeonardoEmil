@@ -11,6 +11,12 @@ namespace Parcial1_LeonardoEmil.Entidades
     {
         [Key]
         public int InventarioId { get; set; }
-        public int TotalInventario { get; set; }
+        public float TotalInventario { get; set; }
+
+        public Inventarios()
+        {
+            InventarioId = 0;
+            TotalInventario = 0;
+        }
     }
 }

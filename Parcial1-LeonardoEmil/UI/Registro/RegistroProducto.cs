@@ -37,8 +37,8 @@ namespace Parcial1_LeonardoEmil.UI.Registro
             producto.Descripcion = DescripciontextBox.Text;
             producto.Existencia = Convert.ToInt32(ExistencianumericUpDown.Value);
             producto.Costo = Convert.ToInt32(CostonumericUpDown.Value);
-        //    producto.ValorInventario = Convert.ToInt32(ValorInventarionumericUpDown.Value);
-         
+            producto.ValorInventario = Convert.ToInt32(ValorInventarionumericUpDown.Value);
+
             return producto;
         }
 
@@ -56,8 +56,8 @@ namespace Parcial1_LeonardoEmil.UI.Registro
             IdnumericUpDown.Value = producto.ProductoId;
             DescripciontextBox.Text = producto.Descripcion;
             ExistencianumericUpDown.Value = producto.Existencia;
-            CostonumericUpDown.Value = producto.Costo;
-            ValorInventarionumericUpDown.Value = producto.ValorInventario;
+            CostonumericUpDown.Value = Convert.ToInt32(producto.Costo);
+            ValorInventarionumericUpDown.Value = Convert.ToInt32(producto.ValorInventario);
         }
 
         private bool ExisteEnLaBaseDeDatos()
@@ -66,7 +66,14 @@ namespace Parcial1_LeonardoEmil.UI.Registro
 
             return (producto != null);
         }
-      
+
+        private bool ExisteEnLaBaseDeDatos2()
+        {
+            Inventarios inventarios = InventariosBLL.Buscar((int)IdnumericUpDown.Value);
+
+            return (inventarios != null);
+        }
+
         private bool Validar()
         {
             bool paso = true;
@@ -92,23 +99,29 @@ namespace Parcial1_LeonardoEmil.UI.Registro
                 CostonumericUpDown.Focus();
                 paso = false;
             }
-                return paso;
+            return paso;
         }
-
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
+            Inventarios inventario = new Inventarios();
+
             Productos producto;
+            // Inventarios inventario;
+
             bool paso = false;
 
             if (!Validar())
                 return;
 
             producto = LlenarClase();
+            //inventario = LLenarInventario();
 
             if (IdnumericUpDown.Value == 0)
             {
                 paso = ProductosBLL.Guardar(producto);
+           
+                // paso = InventariosBLL.Guardar(inventario);
             }
             else
             {
@@ -117,7 +130,10 @@ namespace Parcial1_LeonardoEmil.UI.Registro
                     MessageBox.Show("No se puede modificar una persona que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+              
                 paso = ProductosBLL.Modificar(producto);
+                
+                //  paso = InventariosBLL.Modificar(inventario);
                 MessageBox.Show("Producto Modificado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -130,11 +146,13 @@ namespace Parcial1_LeonardoEmil.UI.Registro
             }
             else
                 MessageBox.Show("Error al Guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+           
         }
 
         private void NuevoButton_Click(object sender, EventArgs e)
         {
             Limpiar();
+            MyErrorProvider.Clear();
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)
@@ -161,15 +179,26 @@ namespace Parcial1_LeonardoEmil.UI.Registro
         private void EliminarButton_Click(object sender, EventArgs e)
         {
             MyErrorProvider.Clear();
+
             int id;
             int.TryParse(IdnumericUpDown.Text, out id);
-
-            Limpiar();
-
-            if (ProductosBLL.Eliminar(id))
-            MessageBox.Show("Producto Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+      
+            if (IdnumericUpDown.Value == 0)
+            {
+                MyErrorProvider.SetError(IdnumericUpDown, "El campo ID no puede estar vacio");
+                IdnumericUpDown.Focus();
+            }
             else
-            MyErrorProvider.SetError(IdnumericUpDown, "Id no Existe");
+            {
+                if (ProductosBLL.Eliminar(id))
+                {
+                    MessageBox.Show("Producto Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                }
+                else
+                    MyErrorProvider.SetError(IdnumericUpDown, "Id no Existe");
+            }
+           
         }
 
         private void CostonumericUpDown_ValueChanged(object sender, EventArgs e)
