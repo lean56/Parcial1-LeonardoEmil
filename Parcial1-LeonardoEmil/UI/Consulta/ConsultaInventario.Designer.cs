@@ -56,6 +56,7 @@
             // 
             // ValorInventariotextBox
             // 
+            this.ValorInventariotextBox.Enabled = false;
             this.ValorInventariotextBox.Location = new System.Drawing.Point(103, 84);
             this.ValorInventariotextBox.Name = "ValorInventariotextBox";
             this.ValorInventariotextBox.Size = new System.Drawing.Size(100, 20);
