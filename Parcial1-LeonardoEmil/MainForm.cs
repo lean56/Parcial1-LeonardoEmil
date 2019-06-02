@@ -19,18 +19,6 @@ namespace Parcial1_LeonardoEmil
             InitializeComponent();
         }
 
-        private void registroProductoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RegistroProducto rp = new RegistroProducto();
-            rp.Show();
-        }
-
-        private void consultaInventarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ConsultaInventario ci = new ConsultaInventario();
-            ci.Show();
-        }
-
         private void mToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Principal p = new Principal();

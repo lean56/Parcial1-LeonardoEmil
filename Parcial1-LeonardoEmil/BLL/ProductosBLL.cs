@@ -129,7 +129,7 @@ namespace Parcial1_LeonardoEmil.BLL
         {
             Inventarios inventario = new Inventarios(); 
 
-            RegistroProducto rp = new RegistroProducto(); //ventana registro
+            rProductos rp = new rProductos(); //ventana registro
 
             var listado = new List<Productos>(); //listado productos
             listado = GetList(p => true);

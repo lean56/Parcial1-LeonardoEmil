@@ -93,18 +93,6 @@
     <Compile Include="UI\Consulta\cConsultaInventario.Designer.cs">
       <DependentUpon>cConsultaInventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Consulta\ConsultaInventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Consulta\ConsultaInventario.Designer.cs">
-      <DependentUpon>ConsultaInventario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Registro\RegistroProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Registro\RegistroProducto.Designer.cs">
-      <DependentUpon>RegistroProducto.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Registro\rProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,12 +117,6 @@
     </Compile>
     <EmbeddedResource Include="UI\Consulta\cConsultaInventario.resx">
       <DependentUpon>cConsultaInventario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consulta\ConsultaInventario.resx">
-      <DependentUpon>ConsultaInventario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registro\RegistroProducto.resx">
-      <DependentUpon>RegistroProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registro\rProductos.resx">
       <DependentUpon>rProductos.cs</DependentUpon>
