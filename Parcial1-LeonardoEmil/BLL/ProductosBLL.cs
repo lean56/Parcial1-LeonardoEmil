@@ -7,6 +7,8 @@ using Parcial1_LeonardoEmil.Entidades;
 using Parcial1_LeonardoEmil.DAL;
 using System.Data.Entity;
 using System.Linq.Expressions;
+using Parcial1_LeonardoEmil.UI.Registro;
+using System.Windows.Forms;
 
 namespace Parcial1_LeonardoEmil.BLL
 {
@@ -122,6 +124,32 @@ namespace Parcial1_LeonardoEmil.BLL
         public static int ValorInventario(int costo,int existencia)
         {
             return costo * existencia;
+        }
+        public static void ActualizaInventario()
+        {
+            Inventarios inventario = new Inventarios(); 
+
+            RegistroProducto rp = new RegistroProducto(); //ventana registro
+
+            var listado = new List<Productos>(); //listado productos
+            listado = GetList(p => true);
+            rp.InventariodataGridView.DataSource = null;
+            rp.InventariodataGridView.DataSource = listado; //llenando datagrid
+            double total = 0;
+            foreach (DataGridViewRow producto in rp.InventariodataGridView.Rows)
+            {
+                total += Convert.ToDouble(producto.Cells["ValorInventario"].Value); //acumulando el valor de inventario productos
+            }
+            inventario.InventarioId = 1;
+            inventario.TotalInventario = Convert.ToSingle(total);
+            if (InventariosBLL.Buscar(1) == null)
+            {
+                InventariosBLL.Guardar(inventario);
+            }
+            else
+            {
+                InventariosBLL.Modificar(inventario);
+            }
         }
     }
 }
