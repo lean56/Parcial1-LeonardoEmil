@@ -104,10 +104,7 @@ namespace Parcial1_LeonardoEmil.UI.Registro
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-            Inventarios inventario = new Inventarios();
-
             Productos producto;
-            // Inventarios inventario;
 
             bool paso = false;
 
@@ -115,13 +112,10 @@ namespace Parcial1_LeonardoEmil.UI.Registro
                 return;
 
             producto = LlenarClase();
-            //inventario = LLenarInventario();
 
             if (IdnumericUpDown.Value == 0)
             {
                 paso = ProductosBLL.Guardar(producto);
-           
-                // paso = InventariosBLL.Guardar(inventario);
             }
             else
             {
@@ -133,7 +127,6 @@ namespace Parcial1_LeonardoEmil.UI.Registro
               
                 paso = ProductosBLL.Modificar(producto);
                 
-                //  paso = InventariosBLL.Modificar(inventario);
                 MessageBox.Show("Producto Modificado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -142,6 +135,7 @@ namespace Parcial1_LeonardoEmil.UI.Registro
             if (paso)
             {
                 MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ProductosBLL.ActualizaInventario();
                 Dispose();
             }
             else
@@ -193,6 +187,7 @@ namespace Parcial1_LeonardoEmil.UI.Registro
                 if (ProductosBLL.Eliminar(id))
                 {
                     MessageBox.Show("Producto Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ProductosBLL.ActualizaInventario();
                     Limpiar();
                 }
                 else
