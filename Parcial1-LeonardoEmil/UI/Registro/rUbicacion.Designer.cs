@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
@@ -37,8 +38,10 @@
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -61,6 +64,7 @@
             this.EliminarButton.Size = new System.Drawing.Size(75, 56);
             this.EliminarButton.TabIndex = 6;
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // Guardarbutton
             // 
@@ -71,6 +75,7 @@
             this.Guardarbutton.Size = new System.Drawing.Size(75, 56);
             this.Guardarbutton.TabIndex = 0;
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click_1);
             // 
             // Nuevobutton
             // 
@@ -81,6 +86,7 @@
             this.Nuevobutton.Size = new System.Drawing.Size(71, 56);
             this.Nuevobutton.TabIndex = 5;
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click_1);
             // 
             // Buscarbutton
             // 
@@ -92,6 +98,7 @@
             this.Buscarbutton.Size = new System.Drawing.Size(60, 46);
             this.Buscarbutton.TabIndex = 13;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // IDnumericUpDown
             // 
@@ -125,6 +132,10 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "ID";
             // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
+            // 
             // rUbicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,6 +152,7 @@
             this.Text = "Registro Ubicacion";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +169,6 @@
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }

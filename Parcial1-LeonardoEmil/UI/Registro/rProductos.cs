@@ -17,6 +17,7 @@ namespace Parcial1_LeonardoEmil.UI.Registro
         public rProductos()
         {
             InitializeComponent();
+            ListadoUbicacion();
         }
 
         private void CerrarButton_Click(object sender, EventArgs e)
@@ -31,6 +32,17 @@ namespace Parcial1_LeonardoEmil.UI.Registro
             CostonumericUpDown.Value = 0;
             ValorInventarionumericUpDown.Value = 0;
         }
+
+        private void ListadoUbicacion()
+        {
+            var listado = new List<Ubicaciones>();
+
+            listado = UbicacionBLL.GetList(p => true);
+            UbicacioncomboBox.DataSource = listado;
+            UbicacioncomboBox.DisplayMember = "Ubicaciones";
+            UbicacioncomboBox.ValueMember = "descripcion";
+        }
+
 
         private Productos LlenarClase()
         {
@@ -218,6 +230,12 @@ namespace Parcial1_LeonardoEmil.UI.Registro
             int existencia = Convert.ToInt32(ExistencianumericUpDown.Value);
 
             ValorInventarionumericUpDown.Value = ProductosBLL.ValorInventario(costo, existencia);
+        }
+
+        private void UbicacionButton_Click(object sender, EventArgs e)
+        {
+            rUbicacion ubicacion = new rUbicacion();
+            ubicacion.Show();
         }
     }
 }

@@ -73,6 +73,16 @@ namespace Parcial1_LeonardoEmil.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cerrar {
+            get {
+                object obj = ResourceManager.GetObject("cerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap document_add_256_icon_icons_com_75994 {
             get {
                 object obj = ResourceManager.GetObject("document_add_256_icon-icons.com_75994", resourceCulture);
@@ -83,29 +93,9 @@ namespace Parcial1_LeonardoEmil.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap file_new_22051 {
-            get {
-                object obj = ResourceManager.GetObject("file_new_22051", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icon_cerrar2 {
             get {
                 object obj = ResourceManager.GetObject("icon cerrar2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icon_cerrar21 {
-            get {
-                object obj = ResourceManager.GetObject("icon cerrar21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

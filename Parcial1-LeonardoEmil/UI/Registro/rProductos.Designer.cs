@@ -50,6 +50,9 @@
             this.CerrarButton = new System.Windows.Forms.Label();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.BuscarButton = new System.Windows.Forms.Button();
+            this.UbicacionButton = new System.Windows.Forms.Button();
+            this.UbicacioncomboBox = new System.Windows.Forms.ComboBox();
+            this.label02 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.InventariodataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ValorInventarionumericUpDown)).BeginInit();
@@ -76,7 +79,7 @@
             this.groupBox1.Controls.Add(this.GuardarButton);
             this.groupBox1.Controls.Add(this.NuevoButton);
             this.groupBox1.Controls.Add(this.EliminarButton);
-            this.groupBox1.Location = new System.Drawing.Point(200, 232);
+            this.groupBox1.Location = new System.Drawing.Point(200, 258);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(258, 93);
             this.groupBox1.TabIndex = 27;
@@ -241,7 +244,7 @@
             this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarButton.AutoSize = true;
             this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CerrarButton.Location = new System.Drawing.Point(579, 9);
+            this.CerrarButton.Location = new System.Drawing.Point(582, 9);
             this.CerrarButton.Name = "CerrarButton";
             this.CerrarButton.Size = new System.Drawing.Size(17, 17);
             this.CerrarButton.TabIndex = 29;
@@ -262,11 +265,41 @@
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
+            // UbicacionButton
+            // 
+            this.UbicacionButton.Location = new System.Drawing.Point(419, 230);
+            this.UbicacionButton.Name = "UbicacionButton";
+            this.UbicacionButton.Size = new System.Drawing.Size(40, 23);
+            this.UbicacionButton.TabIndex = 35;
+            this.UbicacionButton.Text = "+";
+            this.UbicacionButton.UseVisualStyleBackColor = true;
+            this.UbicacionButton.Click += new System.EventHandler(this.UbicacionButton_Click);
+            // 
+            // UbicacioncomboBox
+            // 
+            this.UbicacioncomboBox.FormattingEnabled = true;
+            this.UbicacioncomboBox.Location = new System.Drawing.Point(285, 230);
+            this.UbicacioncomboBox.Name = "UbicacioncomboBox";
+            this.UbicacioncomboBox.Size = new System.Drawing.Size(121, 21);
+            this.UbicacioncomboBox.TabIndex = 34;
+            // 
+            // label02
+            // 
+            this.label02.AutoSize = true;
+            this.label02.Location = new System.Drawing.Point(197, 230);
+            this.label02.Name = "label02";
+            this.label02.Size = new System.Drawing.Size(55, 13);
+            this.label02.TabIndex = 33;
+            this.label02.Text = "Ubicacion";
+            // 
             // rProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 353);
+            this.ClientSize = new System.Drawing.Size(608, 364);
+            this.Controls.Add(this.UbicacionButton);
+            this.Controls.Add(this.UbicacioncomboBox);
+            this.Controls.Add(this.label02);
             this.Controls.Add(this.CerrarButton);
             this.Controls.Add(this.InventariodataGridView);
             this.Controls.Add(this.groupBox1);
@@ -320,5 +353,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label CerrarButton;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.Button UbicacionButton;
+        private System.Windows.Forms.ComboBox UbicacioncomboBox;
+        private System.Windows.Forms.Label label02;
     }
 }
