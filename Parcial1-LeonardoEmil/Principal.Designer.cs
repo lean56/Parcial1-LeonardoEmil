@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Productosbutton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BarraPanel = new System.Windows.Forms.Panel();
-            this.panelContenedor = new System.Windows.Forms.Panel();
             this.IconoMax = new System.Windows.Forms.PictureBox();
             this.IconoRest = new System.Windows.Forms.PictureBox();
             this.IconoMin = new System.Windows.Forms.PictureBox();
             this.IconoCerrar = new System.Windows.Forms.PictureBox();
             this.HideButton = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.Productosbutton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BarraPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconoMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconoRest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconoMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconoCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HideButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -61,6 +61,46 @@
             this.MenuVertical.Size = new System.Drawing.Size(146, 450);
             this.MenuVertical.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Image = global::Parcial1_LeonardoEmil.Properties.Resources.pagos;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 158);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(146, 40);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Inventario";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Productosbutton
+            // 
+            this.Productosbutton.FlatAppearance.BorderSize = 0;
+            this.Productosbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.Productosbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Productosbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Productosbutton.Image = global::Parcial1_LeonardoEmil.Properties.Resources.producto;
+            this.Productosbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Productosbutton.Location = new System.Drawing.Point(0, 112);
+            this.Productosbutton.Name = "Productosbutton";
+            this.Productosbutton.Size = new System.Drawing.Size(146, 40);
+            this.Productosbutton.TabIndex = 1;
+            this.Productosbutton.Text = "Productos";
+            this.Productosbutton.UseVisualStyleBackColor = true;
+            this.Productosbutton.Click += new System.EventHandler(this.Productosbutton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // BarraPanel
             // 
             this.BarraPanel.Controls.Add(this.IconoMax);
@@ -74,14 +114,6 @@
             this.BarraPanel.Size = new System.Drawing.Size(654, 50);
             this.BarraPanel.TabIndex = 1;
             this.BarraPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraPanel_MouseDown);
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(146, 50);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(654, 400);
-            this.panelContenedor.TabIndex = 2;
             // 
             // IconoMax
             // 
@@ -142,45 +174,13 @@
             this.HideButton.TabStop = false;
             this.HideButton.Click += new System.EventHandler(this.HideButton_Click);
             // 
-            // button2
+            // panelContenedor
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = global::Parcial1_LeonardoEmil.Properties.Resources.pagos;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 158);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 40);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Inventario";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // Productosbutton
-            // 
-            this.Productosbutton.FlatAppearance.BorderSize = 0;
-            this.Productosbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.Productosbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Productosbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Productosbutton.Image = global::Parcial1_LeonardoEmil.Properties.Resources.producto;
-            this.Productosbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Productosbutton.Location = new System.Drawing.Point(0, 112);
-            this.Productosbutton.Name = "Productosbutton";
-            this.Productosbutton.Size = new System.Drawing.Size(146, 40);
-            this.Productosbutton.TabIndex = 1;
-            this.Productosbutton.Text = "Productos";
-            this.Productosbutton.UseVisualStyleBackColor = true;
-            this.Productosbutton.Click += new System.EventHandler(this.Productosbutton_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(146, 50);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(654, 400);
+            this.panelContenedor.TabIndex = 2;
             // 
             // Principal
             // 
@@ -194,13 +194,13 @@
             this.Name = "Principal";
             this.Text = "Principal";
             this.MenuVertical.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.BarraPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.IconoMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconoRest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconoMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconoCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HideButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

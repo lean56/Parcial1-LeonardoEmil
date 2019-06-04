@@ -13,6 +13,8 @@ namespace Parcial1_LeonardoEmil.DAL
     {
         public DbSet<Productos> Producto { get; set; }
         public DbSet<Inventarios> Inventario { get; set; }
+        public DbSet<Ubicaciones> Ubicacion { get; set; }
+
 
         public Contexto() : base("Constr") { }
     }

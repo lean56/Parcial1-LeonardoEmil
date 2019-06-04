@@ -34,6 +34,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.GuardarButton = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
+            this.EliminarButton = new System.Windows.Forms.Button();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.ValorInventarionumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CostonumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -46,9 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CerrarButton = new System.Windows.Forms.Label();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.GuardarButton = new System.Windows.Forms.Button();
-            this.NuevoButton = new System.Windows.Forms.Button();
-            this.EliminarButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.InventariodataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -108,6 +108,36 @@
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 14;
             this.label6.Text = "Nuevo";
+            // 
+            // GuardarButton
+            // 
+            this.GuardarButton.Image = global::Parcial1_LeonardoEmil.Properties.Resources.Save_37110;
+            this.GuardarButton.Location = new System.Drawing.Point(102, 19);
+            this.GuardarButton.Name = "GuardarButton";
+            this.GuardarButton.Size = new System.Drawing.Size(64, 57);
+            this.GuardarButton.TabIndex = 12;
+            this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
+            // 
+            // NuevoButton
+            // 
+            this.NuevoButton.Image = global::Parcial1_LeonardoEmil.Properties.Resources.document_add_256_icon_icons_com_75994;
+            this.NuevoButton.Location = new System.Drawing.Point(14, 19);
+            this.NuevoButton.Name = "NuevoButton";
+            this.NuevoButton.Size = new System.Drawing.Size(64, 57);
+            this.NuevoButton.TabIndex = 11;
+            this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
+            // 
+            // EliminarButton
+            // 
+            this.EliminarButton.Image = global::Parcial1_LeonardoEmil.Properties.Resources.Button_Delete_01_25095;
+            this.EliminarButton.Location = new System.Drawing.Point(183, 19);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(64, 57);
+            this.EliminarButton.TabIndex = 13;
+            this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // DescripciontextBox
             // 
@@ -221,36 +251,6 @@
             // MyErrorProvider
             // 
             this.MyErrorProvider.ContainerControl = this;
-            // 
-            // GuardarButton
-            // 
-            this.GuardarButton.Image = global::Parcial1_LeonardoEmil.Properties.Resources.Save_37110;
-            this.GuardarButton.Location = new System.Drawing.Point(102, 19);
-            this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(64, 57);
-            this.GuardarButton.TabIndex = 12;
-            this.GuardarButton.UseVisualStyleBackColor = true;
-            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
-            // 
-            // NuevoButton
-            // 
-            this.NuevoButton.Image = global::Parcial1_LeonardoEmil.Properties.Resources.document_add_256_icon_icons_com_75994;
-            this.NuevoButton.Location = new System.Drawing.Point(14, 19);
-            this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(64, 57);
-            this.NuevoButton.TabIndex = 11;
-            this.NuevoButton.UseVisualStyleBackColor = true;
-            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
-            // 
-            // EliminarButton
-            // 
-            this.EliminarButton.Image = global::Parcial1_LeonardoEmil.Properties.Resources.Button_Delete_01_25095;
-            this.EliminarButton.Location = new System.Drawing.Point(183, 19);
-            this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(64, 57);
-            this.EliminarButton.TabIndex = 13;
-            this.EliminarButton.UseVisualStyleBackColor = true;
-            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // BuscarButton
             // 
