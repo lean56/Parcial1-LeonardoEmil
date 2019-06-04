@@ -39,6 +39,7 @@
             this.ValorInventariotextBox.Enabled = false;
             this.ValorInventariotextBox.Location = new System.Drawing.Point(128, 110);
             this.ValorInventariotextBox.Name = "ValorInventariotextBox";
+            this.ValorInventariotextBox.ReadOnly = true;
             this.ValorInventariotextBox.Size = new System.Drawing.Size(100, 20);
             this.ValorInventariotextBox.TabIndex = 7;
             // 
