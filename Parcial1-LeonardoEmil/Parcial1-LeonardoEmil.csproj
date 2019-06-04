@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="BLL\InventariosBLL.cs" />
     <Compile Include="BLL\ProductosBLL.cs" />
+    <Compile Include="BLL\UbicacionBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Inventarios.cs" />
     <Compile Include="Entidades\Productos.cs" />
